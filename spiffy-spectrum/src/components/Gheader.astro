@@ -1,0 +1,65 @@
+---
+export interface Props {
+  label: string;
+  link: string;
+  menuData: array;
+}
+const { menuData, label, link } = Astro.props;
+const bool = true;
+---
+
+<header class="l-header">
+  <div class="l-header__inner">
+    <h1 class="l-header__logo">
+      <a href="#top" class="l-header__logo-link">Astro Demo</a>
+    </h1>
+    <button class="l-header__button">
+      <div class="l-header__button-icon">
+        <span class="l-header__button-rect"></span>
+      </div>
+      <span class="l-header__button-label">Menu</span>
+    </button>
+    <nav class="l-header__nav">
+      {
+        menuData.map((menu)=>
+          <a href={'#'+menu.link} class="l-header__nav-item">{menu.label}</a>
+        )
+      }
+    </nav>
+  </div>
+  { bool && <span>is true</span>}
+</header>
+
+<style lang="scss">
+  @use "../scss/functions/" as *;
+  
+  .l-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    &__inner {
+      max-width: 1024px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+      @include mq("small", lte) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &__nav {
+
+    }
+
+    &__nav-item {
+      margin-left: 1em;
+    }
+  }
+</style>

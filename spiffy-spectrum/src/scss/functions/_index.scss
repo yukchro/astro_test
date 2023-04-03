@@ -1,0 +1,44 @@
+@use "sass:math";
+@use "sass:map";
+
+@function ls($size) {
+  @return #{ math.div($size, 1000) }em;
+}
+
+// @mixin mq($vpw:"768", $mode:"gte") {
+//   @if $mode=="gte" {
+//     @media screen and (min-width: #{$vpw}px) {
+//       @content;
+//     }
+//   }
+//   @else if $mode == "lte" {
+//     @media screen and not (min-width: #{$vpw}px) {
+//       @content;
+//     }
+//   }
+// }
+
+$breakpoints: (
+  mobile: "480px",
+  xsmall: "640px",
+  small: "768px",
+  medium: "880px",
+  large: "1024px",
+  xlarge: "1240px",
+  extend: "1440px",
+);
+@mixin mq($breakpoint: "medium", $mode:"gte") {
+  @if $mode == "gte" {
+    @media all and (min-width: #{ map.get($breakpoints, $breakpoint) }) {
+      @content;
+    }
+  } @else if $mode =="lte" {
+    @media not all and (min-width: #{ map.get($breakpoints, $breakpoint) }) {
+      @content;
+    }
+  }
+}
+
+@function vw($px, $width: 375) {
+  @return math.div($px, $width) * 100vw;
+}

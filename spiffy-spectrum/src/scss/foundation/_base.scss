@@ -1,0 +1,43 @@
+@use "../functions/" as *;
+
+:root {
+  --color-base: #fff47f;
+  --color-text: #0757a0;
+  --color-accent: #f38b00;
+  --font-jpn: "Kiwi Maru", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Yu Gothic", "メイリオ", "Meiryo", sans-serif;
+  --font-eng: "Marcellus", sans-serif;
+  --font-serif: "Noto Serif JP", serif;
+  --hover-duration: 300ms;
+  font-size: 10px;
+
+  @include mq("mobile") {
+    font-size: 11px;
+  }
+  @include mq("xsmall") {
+    font-size: 13px;
+  }
+  @include mq("medium") {
+    font-size: 17px;
+  }
+}
+
+body {
+  width: 100%;
+  font-family: var(--font-jpn);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: ls(40);
+
+  &.is-fixed,
+  &.is-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+button:focus {
+  outline: 0;
+}
