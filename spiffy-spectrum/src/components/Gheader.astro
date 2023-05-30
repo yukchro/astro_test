@@ -13,7 +13,7 @@ const bool = true;
     <h1 class="l-header__logo">
       <a href="#top" class="l-header__logo-link">Astro Demo</a>
     </h1>
-    <button class="l-header__button">
+    <button class="l-header__button" id="js-nav-button">
       <div class="l-header__button-icon">
         <span class="l-header__button-rect"></span>
       </div>
@@ -31,7 +31,7 @@ const bool = true;
 </header>
 
 <style lang="scss">
-  @use "../scss/functions/" as *;
+  @use "/src/scss/functions/" as *;
   
   .l-header {
     position: sticky;
@@ -54,8 +54,15 @@ const bool = true;
       }
     }
 
-    &__nav {
+    &__button {
 
+    }
+
+    &__nav {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      //opacity: ;
     }
 
     &__nav-item {

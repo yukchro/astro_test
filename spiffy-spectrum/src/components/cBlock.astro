@@ -1,0 +1,89 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  desc: string;
+  body: string;
+}
+const { image, title, body, desc } = Astro.props;
+---
+
+<section class="c-block">
+  <div class="c-block__thumbnail">
+    <img src={'/assets/images/'+image} alt="" class="c-block__image">
+  </div>
+  <div class="c-block__text">
+    <h2 class="c-block__title">{title}</h2>
+    <p class="c-block__desc">{desc}</p>
+    {body &&<span class="c-block__more js-more">もっと見る +</span>}
+  </div>
+
+  {body &&<div class="c-block__body js-body"><slot /></div>}
+</section>
+
+<script>
+  const more = document.querySelectorAll('.js-more');
+  const body = document.querySelectorAll('.js-body');
+  more.forEach((m, i)=> {
+    m.addEventListener('click', ()=>{
+      if(body[i].classList.contains('is-show')) {
+        m.innerHTML = 'もっと見る +';
+        body[i].classList.remove('is-show');
+      } else {
+        m.innerHTML = '閉じる';
+        body[i].classList.add('is-show');
+      }
+    });
+  });
+</script>
+
+<style lang="scss">
+  .c-block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 16px;
+
+    &__thumbnail {
+      background-color: #ccc;
+      width: 256px;
+      height: 144px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__image {
+      width: 48px;
+      height: 48px
+    }
+
+    &__title {
+      font-size: 1.2em;
+    }
+
+    &__desc {
+      font-size: 0.8em;
+      color: #333;
+    }
+
+    &__more {
+      font-size: 0.8em;
+      color: #333;
+    }
+
+    &__body {
+      width: 100%;
+      display: none;
+      font-size: 0.8em;
+      color: #333;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+    &__body.is-show {
+      display: block;
+    }
+  }
+</style>

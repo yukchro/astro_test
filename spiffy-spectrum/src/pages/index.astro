@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Cblock from '../components/cBlock.astro';
 import Card from '../components/Card.astro';
 import Gheader from '../components/Gheader.astro';
+import Vheader from '../components/Gheader.vue';
 
 export const menu = [
 	{
@@ -40,10 +42,19 @@ const cards = [
 		body: "Markdownファイルをページに読み込める！"
 	}
 ];
+
+const sections = {
+	image: 'section1.png',
+	title: '見出し',
+	desc: '概要',
+	body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
+}
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<Gheader menuData={menu} />
+	<Vheader client:load />
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
@@ -57,8 +68,10 @@ const cards = [
 				)
 			}
 		</ul>
-		<a href="/post">Markdownファイルをページとして読み込める</a>
-		<p></p>
+
+		<Cblock image={sections.image} title={sections.title} desc={sections.desc} body="true">
+			<p set:html={sections.body} />
+		</Cblock>
 	</main>
 </Layout>
 
@@ -104,5 +117,6 @@ const cards = [
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+		margin-bottom: 48px;
 	}
 </style>
