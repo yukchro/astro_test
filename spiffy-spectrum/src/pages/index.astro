@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Cblock from '../components/cBlock.astro';
 import Card from '../components/Card.astro';
-import Gheader from '../components/Gheader.astro';
 import Vheader from '../components/Gheader.vue';
 
 export const menu = [
@@ -20,6 +19,7 @@ export const menu = [
     link: "contact",
   }
 ];
+
 const cards = [
 	{
 		href: "https://yukchro.net/",
@@ -43,17 +43,25 @@ const cards = [
 	}
 ];
 
-const sections = {
+const section = {
 	image: 'section1.png',
 	title: '見出し',
 	desc: '概要',
 	body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
 }
 
+const sections = [
+	{
+		image: 'section1.png',
+		title: '見出し',
+		desc: '概要',
+		body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
+	}
+]
+
 ---
 
 <Layout title="Welcome to Astro.">
-	<Gheader menuData={menu} />
 	<Vheader client:load />
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
@@ -69,9 +77,15 @@ const sections = {
 			}
 		</ul>
 
-		<Cblock image={sections.image} title={sections.title} desc={sections.desc} body="true">
-			<p set:html={sections.body} />
-		</Cblock>
+		<div class="sample-components">
+			{
+				sections.map((sec) => 
+					<Cblock image={sec.image} title={sec.title} desc={sec.desc} body="true">
+						<p set:html={sec.body} />
+					</Cblock>
+				)
+			}
+		</div>
 	</main>
 </Layout>
 
