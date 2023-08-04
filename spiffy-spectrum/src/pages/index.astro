@@ -80,7 +80,7 @@ const sections = [
 		<div class="sample-components">
 			{
 				sections.map((sec) => 
-					<Cblock image={sec.image} title={sec.title} desc={sec.desc} body="true">
+					<Cblock image={sec.image} title={sec.title} desc={sec.desc} body="true" size="large">
 						<p set:html={sec.body} />
 					</Cblock>
 				)
