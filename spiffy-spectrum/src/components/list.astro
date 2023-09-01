@@ -1,0 +1,57 @@
+---
+export interface Props {
+  pdata: Object;
+}
+const pdata = Astro.props;
+---
+
+<div class="p-index">
+  <ol class="p-index-list is-list">
+    {
+      pdata["pdata"].map( (item) =>
+        <li class="p-index-list__item">
+          <figure class="p-index-list__icon">
+            <img src={"/assets/sprite/"+item.number+".png"} alt="" width="160" height="160" class="p-index-list__icon-image">
+          </figure>
+          <h2 class="p-index-list__name">
+            <span class="p-index-list__name-jpn">{ item.nameJpn }</span>
+          </h2>
+          <span class="p-index-list__more">詳細を見る</span>
+        </li>
+      )
+    }
+  </ol>
+</div>
+
+<style lang="scss">
+  .p-index-list {
+    padding: 8px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      background-color: #defcff;
+      padding: 8px;
+    }
+    &__item:not(last-child) {
+      margin-bottom: 16px;
+    }
+
+    &__name-jpn {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(#000, 0.1);
+    }
+
+    &__more {
+      font-size: 12px;
+      margin-left: auto;
+    }
+  }
+</style>

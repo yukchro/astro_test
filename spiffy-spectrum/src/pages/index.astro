@@ -4,133 +4,120 @@ import Cblock from '../components/cBlock.astro';
 import Card from '../components/Card.astro';
 import Vheader from '../components/Gheader.vue';
 
-export const menu = [
-	{
-    label: "サイトについて",
-    link: "about",
-		href: "about",
-  },
-  {
-    label: "お知らせ",
-    link: "news",
-  },
-  {
-    label: "お問い合わせ",
-    link: "contact",
-  }
-];
-
-const cards = [
-	{
-		href: "https://yukchro.net/",
-		title: "Ruler by YukChro",
-		body: "個人ポートフォリオサイト"
-	},
-	{
-		href: "https://docs.astro.build/",
-		title: "Documentation",
-		body: "Learn how Astro works and explore the official API docs."
-	},
-	{
-		href: "https://astro.build/integrations/",
-		title: "Integrations",
-		body: "Supercharge your project with new frameworks and libraries."
-	},
-	{
-		href: "/post",
-		title: "Include Markdown",
-		body: "Markdownファイルをページに読み込める！"
-	}
-];
-
-const section = {
-	image: 'section1.png',
-	title: '見出し',
-	desc: '概要',
-	body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
-}
+const response = await fetch('http://localhost:8000/wp-json/wp/v2/posts/');
+const post = await response.json();
+post.forEach((p, i) => {
+	let f_date = new Date(p.date);
+	let f_dateY = f_date.getFullYear();
+	let f_dateM = f_date.getMonth();
+	let f_dateD = f_date.getDate();
+	post[i].date = f_dateY +'/'+ f_dateM +'/'+ f_dateD; 
+})
 
 const sections = [
 	{
 		image: 'section1.png',
-		title: '見出し',
+		title: 'Google',
 		desc: '概要',
 		body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
-	}
+	},
+	{
+		image: 'section1.png',
+		title: 'Facebook',
+		desc: '概要',
+		body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
+	},
 ]
 
 ---
 
 <Layout title="Welcome to Astro.">
-	<Vheader client:load />
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			{
-				cards.map((val) => 
-					<Card title={val.title} href={val.href} body={val.body} />
-				)
-			}
-		</ul>
+		<h1>デモページ</h1>
 
-		<div class="sample-components">
+		<section class="p-demo-components">
+			<h2 class="p-demo-components__headline">コンポーネントの読み込み</h2>
+			<p class="p-demo-components__text">propsに値を渡して内容やスタイルを変更できます。</p>
+			<div class="p-demo-components__list">
+				<Cblock image="section1.png" title="Google" desc="概要" />
+				<Cblock image="section1.png" title="あああ" desc="タイトルのスタイルが違う場合" size="large" />
+				<Cblock image="section1.png" title="いいい" desc="bodyに値を渡すと" body="もっと見るが表示される" />
+				<Cblock image="section1.png" title="ううう" desc="概要" />
+			</div>
+		</section>
+
+		<section class="p-demo-components">
+			<h2 class="p-demo-components__headline">slotの利用</h2>
+			<p class="p-demo-components__text">コンポーネントにslotを設定すると、読み込み時にエレメント内に書いた内容が挿入されます。</p>
+			<div class="p-demo-components__list">
+				<Cblock image="section1.png" title="slotに挿入" desc="slotのみを使う場合は" body='slot'>
+					<ul>
+						<li>リスト項目1</li>
+						<li>リスト項目2</li>
+					</ul>
+				</Cblock>
+			</div>
+		</section>
+
+		<section class="p-demo-components">
+			<h2 class="p-demo-components__headline">コンポーネントの読み込みの応用</h2>
+			<p class="p-demo-components__text">APIから取得、または予め用意したデータを用意し、ループさせる。</p>
+			<div class="p-demo-components__list">
+				{
+					sections.map((sec) => 
+						<Cblock image={sec.image} title={sec.title} desc={sec.desc} body={sec.body} />
+					)
+				}
+			</div>
+		</section>
+
+		<section class="p-demo-components">
+			<h2 class="p-demo-components__title">APIの読み込み</h2>
+			<p class="p-demo-components__text">API機能WP REST APIを使ってWordPressのフロントとして使える</p>
 			{
-				sections.map((sec) => 
-					<Cblock image={sec.image} title={sec.title} desc={sec.desc} body="true" size="large">
-						<p set:html={sec.body} />
-					</Cblock>
+				post.map((p) => 
+					<article class="p-demo-components__post">
+						<span class="p-demo-components__post-date">{p.date}</span>
+						<h2>{p.title.rendered}</h2>
+					</article>
 				)
 			}
-		</div>
+		</section>
 	</main>
 </Layout>
 
-<style>
+<style lang="scss">
 	main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
+		max-width: 1280px;
 	}
+
 	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+		font-size: 32px;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-		margin-bottom: 48px;
+
+	.p-demo-components {
+		margin-bottom: 64px;
+
+		&__headline {
+			font-size: 24px;
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			margin-bottom: 24px;
+			color: #333;
+			font-size: 16px;
+			line-height: 1.8;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 32px;
+			grid-row-gap: 32px;
+		}
 	}
 </style>

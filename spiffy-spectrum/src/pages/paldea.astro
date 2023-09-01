@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import List from '../components/list.astro';
+import Search from '../components/search.vue';
+import NavHeader from '../components/navHeader.astro';
+import pokeData from '../data.json';
+---
+
+<Layout title="Paldea Pokedex">
+  <div class="p-container">
+    <div class="p-container__box">
+      <NavHeader />
+      <List pdata={pokeData} />
+      <Search />
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .p-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    
+    &__box {
+      max-width: 480px;
+      width: 100%;
+      aspect-ratio: 9/16;
+      background-color: #fff;
+      padding-bottom: 96px;
+    }
+  }
+
+</style>

@@ -1,0 +1,34 @@
+---
+export interface Props {
+
+}
+---
+
+<header class="c-header">
+  <h1 class="c-header__title">ポケモン図鑑(パルデア)</h1>
+  <button class="c-header__toggle">表示切替</button>
+  <button class="c-header__sort">並び替え</button>
+</header>
+
+<style lang="scss">
+.c-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  background-color: #fff;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__toggle {
+    margin-left: auto;
+  }
+}
+</style>

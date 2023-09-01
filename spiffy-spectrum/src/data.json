@@ -1,0 +1,137 @@
+[
+  {
+    "number": 1,
+    "numberAll": 0,
+    "nameJpn": "ニャオハ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "glass",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 2,
+    "numberAll": 0,
+    "nameJpn": "ニャローテ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "glass",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 3,
+    "numberAll": 0,
+    "nameJpn": "マスカーニャ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "glass",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 4,
+    "numberAll": 0,
+    "nameJpn": "ホゲータ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 5,
+    "numberAll": 0,
+    "nameJpn": "アチゲータ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 6,
+    "numberAll": 0,
+    "nameJpn": "ラウドボーン",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": "ghost",
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 7,
+    "numberAll": 0,
+    "nameJpn": "クワッス",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": "ghost",
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 8,
+    "numberAll": 0,
+    "nameJpn": "ウェルカモ",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": "ghost",
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  },
+  {
+    "number": 9,
+    "numberAll": 0,
+    "nameJpn": "ウェーニバル",
+    "nameEng": "english name",
+    "class": "ねこ",
+    "type1": "fire",
+    "type2": "ghost",
+    "height": 0,
+    "weight": 0,
+    "descriptions": [
+      "",
+      ""
+    ]
+  }
+]
