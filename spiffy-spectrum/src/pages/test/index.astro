@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Content from '../../components/content.astro';
+
+const sections = [
+	{
+		image: 'icon_gg.png',
+		title: 'Google',
+		desc: 'Google LLCは、インターネット関連のサービスと製品に特化したアメリカ合衆国の企業 である。',
+	},
+	{
+		image: 'icon_fb.png',
+		title: 'Facebook',
+		desc: '2021年に、Facebook, Inc.から現社名に変更した。',
+		body: '詳細テキスト詳細テキスト詳細テキスト詳細テキスト<br>詳細テキスト詳細テキスト'
+	},
+  {
+    image: 'icon_tw.png',
+    title: 'Twitter',
+    desc: 'Twitter（ツイッター）、現在のX（エックス）は、アメリカ合衆国のX社が運営するソーシャルメディア、ソーシャル・ネットワーキング・サービス。'
+  }
+]
+
+---
+
+<Layout title="クリエイティブ勉強会 2023/12">
+  <main>
+    <h1>クリエイティブ勉強会 デモページ</h1>
+
+    <section class="p-demo-components">
+      <h2 class="p-demo-components__headline">基本的なコンポーネント</h2>
+      <p class="p-demo-components__text">propsに値を渡して内容やスタイルを変更できます。</p>
+      <div class="p-demo-components__list">
+        <Content image="section1.png" title="タイトル変更" desc="概要テキスト概要テキスト" body="詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト" size="large" />
+        <Content image="section1.png" title="タイトル2" desc="概要テキスト概要テキスト" body="詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト詳細なテキスト" />
+      </div>
+    </section>
+    
+    
+    <section class="p-demo-components">
+			<h2 class="p-demo-components__headline">slotやpropsを使用した応用</h2>
+      <p class="p-demo-components__text">コンポーネントにslotを設定すると、読み込み時にエレメント内に書いた内容が挿入されます。</p>
+      <div class="p-demo-components__list">
+        <Content image="section1.png" title="slotに挿入" desc="slotのみを使う場合は" body='slot'>
+          <ul>
+            <li>リスト1</li>
+            <li>リスト2</li>
+            <li>リスト3</li>
+          </ul>
+        </Content>
+      </div>
+    </section>
+
+    <section class="p-demo-components">
+			<h2 class="p-demo-components__headline">オブジェクトデータを使用した応用</h2>
+			<p class="p-demo-components__text">APIから取得、または予め用意したデータを用意し、ループさせる。</p>
+			<div class="p-demo-components__list">
+				{
+					sections.map((sec) => 
+						<Content image={sec.image} title={sec.title} desc={sec.desc} body={sec.body} />
+					)
+				}
+			</div>
+		</section>
+  </main>
+</Layout>
+
+<style lang="scss">
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+		max-width: 1280px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+  .p-demo-components {
+		margin-bottom: 64px;
+
+		&__headline {
+			font-size: 24px;
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			margin-bottom: 24px;
+			color: #333;
+			font-size: 16px;
+			line-height: 1.8;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 32px;
+			grid-row-gap: 32px;
+		}
+  }
+</style>
