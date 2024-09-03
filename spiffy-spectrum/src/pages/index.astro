@@ -4,15 +4,15 @@ import Cblock from '../components/cBlock.astro';
 import Card from '../components/Card.astro';
 import Vheader from '../components/Gheader.vue';
 
-const response = await fetch('http://localhost:8000/wp-json/wp/v2/posts/');
-const post = await response.json();
-post.forEach((p, i) => {
-	let f_date = new Date(p.date);
-	let f_dateY = f_date.getFullYear();
-	let f_dateM = f_date.getMonth();
-	let f_dateD = f_date.getDate();
-	post[i].date = f_dateY +'/'+ f_dateM +'/'+ f_dateD; 
-})
+// const response = await fetch('http://localhost:8000/wp-json/wp/v2/posts/');
+// const post = await response.json();
+// post.forEach((p, i) => {
+// 	let f_date = new Date(p.date);
+// 	let f_dateY = f_date.getFullYear();
+// 	let f_dateM = f_date.getMonth();
+// 	let f_dateD = f_date.getDate();
+// 	post[i].date = f_dateY +'/'+ f_dateM +'/'+ f_dateD; 
+// })
 
 const sections = [
 	{

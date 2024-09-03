@@ -39,6 +39,6 @@ $breakpoints: (
   }
 }
 
-@function vw($px, $width: 375) {
+@function vw($px, $width: 720) {
   @return math.div($px, $width) * 100vw;
 }

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import List from '../components/list.astro';
-import Search from '../components/search.vue';
+import Search from '../components/search.astro';
 import NavHeader from '../components/navHeader.astro';
 import pokeData from '../data.json';
 ---
@@ -18,6 +18,7 @@ import pokeData from '../data.json';
 
 <style lang="scss">
   .p-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
