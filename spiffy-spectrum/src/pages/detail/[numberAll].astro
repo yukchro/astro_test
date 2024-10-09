@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pokeData from '../../data.json';
+
+export async function getStaticPaths() {
+  const pages = pokeData;
+  return pages.map(({ numberAll, nameJpn, category, descriptions, ja }) => {
+    return {
+      params: { numberAll },
+      props: { numberAll, nameJpn, category, descriptions, ja },
+    };
+  });
+}
+
+const { numberAll, nameJpn, category, descriptions, ja } = Astro.props;
+---
+
+<Layout title={ `${nameJpn}` }>
+  <main data-pagefind-body>
+    <h1>{ nameJpn }</h1>
+    <img src={"/assets/sprite/"+numberAll+".png"} alt="" width="160" height="160">
+    <p>{ category }ポケモン</p>
+    <p>
+      スカーレット：<br>
+      { descriptions['scarlet'] }
+    </p>
+    <p>
+      バイオレット：<br>
+      { descriptions['violet'] }
+    </p>
+  </main>
+</Layout>
