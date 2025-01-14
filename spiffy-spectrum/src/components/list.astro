@@ -5,50 +5,65 @@ export interface Props {
 const pdata = Astro.props;
 ---
 
-<div class="p-index">
-  <ol class="p-index-list is-list">
+<div class="pokedex">
+  <ol class="pokedex-list is-list">
     {
       pdata["pdata"].map( (item) =>
-        <li class="p-index-list__item">
-          <span class="p-index-list__number">{item.numberAll}</span>
-          <figure class="p-index-list__icon">
-            <img src={"/assets/sprite/"+item.numberAll+".png"} alt="" width="160" height="160" class="p-index-list__icon-image">
-          </figure>
-          <h2 class="p-index-list__name">
-            <span class="p-index-list__name-jpn">{ item.nameJpn }</span>
-          </h2>
-          <div class="p-index-list__type">
-            <span class={"p-index-list__type-label p-index-list__type--" +item.type1 }>
-              <img src={"/assets/images/"+item.type1+".svg"} alt={item.type1} class="p-index-list__type-icon">
-            </span>
-            {
-              item.type2 &&
-              <span class={"p-index-list__type-label p-index-list__type--" +item.type2 }>
-                <img src={"/assets/images/"+item.type2+".svg"} alt={item.type2} class="p-index-list__type-icon">
+        <li class="pokedex-list__item">
+          <a href={"/detail/"+item.numberAll+"/"} class="pokedex-list__link">
+            <span class="pokedex-list__number">{item.numberAll}</span>
+            <figure class="pokedex-list__icon">
+              <img src={"/assets/sprite/"+item.numberAll+".png"} alt="" width="160" height="160" class="pokedex-list__icon-image">
+            </figure>
+            <h2 class="pokedex-list__name">
+              <span class="pokedex-list__name-jpn">{ item.nameJpn }</span>
+            </h2>
+            <div class="pokedex-list__type">
+              <span class={"pokedex-list__type-label u-type-" +item.type1 }>
+                <img src={"/assets/images/"+item.type1+".svg"} alt={item.type1} class="pokedex-list__type-icon">
               </span>
-            }
-          </div>
+              {
+                item.type2 &&
+                <span class={"pokedex-list__type-label u-type-" +item.type2 }>
+                  <img src={"/assets/images/"+item.type2+".svg"} alt={item.type2} class="pokedex-list__type-icon">
+                </span>
+              }
+            </div>
+          </a>
         </li>
       )
     }
   </ol>
 </div>
 
+<script>
+  window.addEventListener("DOMContentLoaded", (e) => {
+    const list = document.querySelectorAll('.pokedex-list__item')
+    
+  })
+</script>
+
 <style lang="scss">
-  .p-index-list {
+  .pokedex-list {
     padding: 8px;
 
     &__item {
-      display: flex;
-      align-items: center;
-      column-gap: 16px;
-      background-color: #eee;
-      padding: 8px 16px;
-      border-radius: 4px;
+      &:active {
+        translate: 1px 1px;
+      }
     }
 
     &__item:not(last-child) {
       margin-bottom: 16px;
+    }
+    
+    &__link {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      background-color: #d9d9d9;
+      padding: 8px 16px;
+      border-radius: 16px;
     }
 
     &__number {
@@ -63,6 +78,7 @@ const pdata = Astro.props;
     &__icon {
       width: 48px;
       height: 48px;
+      border-radius: 16px;
       background-color: rgba(#000, 0.2);
     }
 

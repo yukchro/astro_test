@@ -8,7 +8,7 @@ import Pagefind from "../components/pagefind.astro";
 ---
 
 <Layout title="Paldea Pokedex">
-  <div class="p-container">
+  <div class="p-container" transition:animate="slide">
     <div class="p-container__box">
       <NavHeader />
       <List pdata={pokeData} />

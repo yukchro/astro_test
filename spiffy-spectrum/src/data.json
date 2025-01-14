@@ -276,5 +276,20 @@
       "scarlet": "",
       "violet": ""
     }
+  },
+  {
+    "number": 24,
+    "numberAll": 987,
+    "nameJpn": "ハバタクカミ",
+    "nameEng": "Flutter Mane",
+    "category": "パラドックス",
+    "type1": "ghost",
+    "type2": "fairy",
+    "height": 0.9,
+    "weight": 41.0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
   }
 ]

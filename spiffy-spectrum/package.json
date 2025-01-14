@@ -13,6 +13,7 @@
     "@astrojs/vue": "^4.5.2",
     "@pagefind/default-ui": "^1.1.1",
     "astro": "^4.15.12",
+    "astro-icon": "^1.1.5",
     "pagefind": "^1.1.1",
     "sass": "^1.62.0"
   }

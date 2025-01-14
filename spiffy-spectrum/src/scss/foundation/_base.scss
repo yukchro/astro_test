@@ -7,6 +7,26 @@
   --hover-duration: 400ms;
   font-size: 10px;
 
+  --color-type-bug: #92bc2c;
+  --color-type-dark: #595761;
+  --color-type-dragon: #0C69C8;
+  --color-type-electric: #F2D94E;
+  --color-type-fire: #FBA54C;
+  --color-type-fairy: #EE90E6;
+  --color-type-fighting: #D3425F;
+  --color-type-flying: #A1BBEC;
+  --color-type-ghost: #5F6DBC;
+  --color-type-grass: #5FBD58;
+  --color-type-ground: #DA7C4D;
+  --color-type-ice: #75D0C1;
+  --color-type-normal: #D3425F;
+  --color-type-poison: #B763CF;
+  --color-type-psychic: #FA8581;
+  --color-type-rock: #C9BB8A;
+  --color-type-steel: #5695A3;
+  --color-type-water: #539DDF;
+  
+
   @include mq("mobile") {
     font-size: 11px;
   }
@@ -16,6 +36,65 @@
   @include mq("medium") {
     font-size: 17px;
   }
+}
+
+.u-type-bug {
+  background-color: var(--color-type-bug);
+}
+
+.u-type-dark {
+  background-color: var(--color-type-dark);
+}
+.u-type-dragon {
+  background-color: var(--color-type-dragon);
+}
+.u-type-electric {
+  background-color: var(--color-type-electric);
+}
+.u-type-fire {
+  background-color: var(--color-type-fire);
+}
+.u-type-fairy {
+  background-color: var(--color-type-fairy);
+}
+.u-type-fighting {
+  background-color: var(--color-type-fighting);
+}
+.u-type-flying {
+  background-color: var(--color-type-flying);
+}
+.u-type-ghost {
+  background-color: var(--color-type-ghost);
+}
+.u-type-ghost {
+  background-color: var(--color-type-ghost);
+}
+.u-type-grass {
+  background-color: var(--color-type-grass);
+}
+.u-type-ground {
+  background-color: var(--color-type-ground);
+}
+.u-type-ice {
+  background-color: var(--color-type-ice);
+}
+.u-type-normal {
+  background-color: var(--color-type-normal);
+}
+.u-type-poison {
+  background-color: var(--color-type-poison);
+}
+.u-type-psychic {
+  background-color: var(--color-type-psychic);
+}
+.u-type-rock {
+  background-color: var(--color-type-rock);
+}
+.u-type-steel {
+  background-color: var(--color-type-steel);
+}
+.u-type-water {
+  background-color: var(--color-type-water);
 }
 
 body {
