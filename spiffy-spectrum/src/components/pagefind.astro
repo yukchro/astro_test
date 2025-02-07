@@ -63,6 +63,7 @@ import '/src/scss/pagefind.css';
 </script>
 
 <style lang="scss">
+
   .l-pokedex-nav {
     position: fixed;
     bottom: 0;
@@ -71,6 +72,11 @@ import '/src/scss/pagefind.css';
     padding-right: 16px;
     padding-left: 16px;
     padding-bottom: 16px;
+
+    @include mq('mobile', gte) {
+      left: calc((100vw - 480px) / 2);
+      max-width: 480px;
+    }
     
     &__inner {
       position: relative;
@@ -86,6 +92,7 @@ import '/src/scss/pagefind.css';
 
     &__func {
       font-weight: 700;
+      font-size: 1.6rem;
     }
 
     &--reset {

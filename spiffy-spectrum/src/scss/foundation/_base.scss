@@ -27,15 +27,15 @@
   --color-type-water: #539DDF;
   
 
-  @include mq("mobile") {
-    font-size: 11px;
-  }
-  @include mq("xsmall") {
-    font-size: 13px;
-  }
-  @include mq("medium") {
-    font-size: 17px;
-  }
+  // @include mq("mobile") {
+  //   font-size: 11px;
+  // }
+  // @include mq("xsmall") {
+  //   font-size: 13px;
+  // }
+  // @include mq("medium") {
+  //   font-size: 17px;
+  // }
 }
 
 .u-type-bug {

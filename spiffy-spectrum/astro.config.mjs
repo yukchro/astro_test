@@ -7,5 +7,14 @@ export default defineConfig({
   base: '/',
   integrations: [
     installedIntegration(),
-  ]
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "src/scss/functions/_index.scss" as *;'
+        }
+      }
+    }
+  }
 });

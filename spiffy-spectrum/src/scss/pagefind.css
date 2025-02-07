@@ -4,14 +4,14 @@
   left: 0;
   width: 100%;
   max-height: calc(100dvh - 160px);
+  overflow: auto;
+  border-radius: 16px;
+  background-color: rgba(51, 51, 51, 0.96);
 }
 
 .pagefind-ui__results-area {
-  background-color: rgba(51, 51, 51, 0.96);
   backdrop-filter: blur(4px);
   color: #fff;
-  border-radius: 16px;
-  overflow: auto;
   max-height: 100%;
   padding: 20px;
 }
