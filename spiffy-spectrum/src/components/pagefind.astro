@@ -9,7 +9,7 @@ import '/src/scss/pagefind.css';
     <button class="l-pokedex-nav__func l-pokedex-nav--sort" id="sort-toggle">Sort</button>
     <button class="l-pokedex-nav__func l-pokedex-nav--filter" >Filter</button>
     <button class="l-pokedex-nav__search" id="search-toggle">
-      <span class="l-pokedex-nav__search-rect">Search</span>
+      <span class="l-pokedex-nav__search-rect" transition:persist>Search</span>
     </button>
   </div>
   <div class="l-pokedex-search" id="search"></div>
@@ -21,31 +21,32 @@ import '/src/scss/pagefind.css';
   </div>
 </nav>
 
-<script>
+<script >
   import { PagefindUI } from '@pagefind/default-ui'
-  new PagefindUI({
-    element: '#search',
-    showImages: true,
-    translations: {
-      placeholder: "input search text...",
-    }
-  });
+  
+  function searchMenus() {
+    new PagefindUI({
+      element: '#search',
+      showImages: true,
+      translations: {
+        placeholder: "input search text...",
+      }
+    });
 
-  window.addEventListener('DOMContentLoaded', ()=> {
     const searchToggle = document.getElementById('search-toggle');
     const searchArea = document.querySelector('.l-pokedex-search');
     searchToggle.addEventListener('click', ()=> {
       searchArea.classList.toggle('is-active');
       searchToggle.classList.toggle('is-active');
     });
-
+  
     const sortToggle = document.getElementById('sort-toggle');
     const sortArea = document.querySelector('.l-pokedex-nav__sort');
-
+  
     sortToggle.addEventListener('click', ()=> {
       sortArea.classList.toggle('is-active')
     })
-
+  
     const dataList = document.querySelectorAll('.pokedex-list__item');
     const sortType = document.querySelectorAll('.l-pokedex-nav__sort-item');
     sortType.forEach(t => {
@@ -55,7 +56,10 @@ import '/src/scss/pagefind.css';
         }
       })
     })
-  });
+  }
+
+  searchMenus();
+  document.addEventListener('astro:after-swap', searchMenus)
 </script>
 
 <style lang="scss">
