@@ -3,7 +3,6 @@
   bottom: calc( 100% + 16px );
   left: 0;
   width: 100%;
-  padding: 20px;
   max-height: calc(100dvh - 160px);
 }
 
@@ -14,6 +13,7 @@
   border-radius: 16px;
   overflow: auto;
   max-height: 100%;
+  padding: 20px;
 }
 
 .pagefind-ui__form {
@@ -47,15 +47,17 @@
 }
 
 .pagefind-ui__message {
-  margin-bottom: 1em;
-  font-size: 1.8rem;
-  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
 .pagefind-ui__results {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 24px;
 }
 
 .pagefind-ui__result {
