@@ -56,90 +56,90 @@
     "number": 4,
     "numberAll": 909,
     "nameJpn": "ホゲータ",
-    "nameEng": "english name",
+    "nameEng": "Fuecoco",
     "category": "ほのおワニ",
     "type1": "fire",
     "type2": false,
-    "height": 0,
-    "weight": 0,
+    "height": 0.4,
+    "weight": 9.8,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "温かい 岩の上で 寝転び 四角い うろこから 取り込んだ 熱で 炎エネルギーを 作る。",
+      "violet": "炎袋が 小さく あふれ出た エネルギーが 頭の くぼみから 放出され ゆらゆら 揺れる。"
     }
   },
   {
     "number": 5,
     "numberAll": 910,
     "nameJpn": "アチゲータ",
-    "nameEng": "english name",
+    "nameEng": "Crocalor",
     "category": "ほのおワニ",
     "type1": "fire",
     "type2": false,
-    "height": 0,
-    "weight": 0,
+    "height": 1.0,
+    "weight": 30.7,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "炎エネルギーと 有り余る 生命力が 交じり 頭上に タマゴ型の 火玉が 現れた。",
+      "violet": "声帯と 炎袋の 弁は 密接な 関係。 だみ声を 上げながら 炎を 吐き散らす。"
     }
   },
   {
     "number": 6,
     "numberAll": 911,
     "nameJpn": "ラウドボーン",
-    "nameEng": "english name",
+    "nameEng": "Skeledirge",
     "category": "シンガー",
     "type1": "fire",
     "type2": "ghost",
     "height": 1.6,
     "weight": 326.5,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "歌声で 姿かたちを 変える 炎の鳥は 頭上の 火玉に 魂が 宿ったもの だという。",
+      "violet": "頭上の火玉には 魂が宿っており ラウドボーンの眠りが 浅くなると 動き回って時折いたずらをすることもある。 面倒みのよいラウドボーンは 何をされても怒ることなく 眠り続けているよ。"
     }
   },
   {
     "number": 7,
     "numberAll": 912,
     "nameJpn": "クワッス",
-    "nameEng": "english name",
+    "nameEng": "Quaxly",
     "category": "こがも",
     "type1": "water",
     "type2": false,
-    "height": 0,
-    "weight": 0,
+    "height": 0.5,
+    "weight": 6.1,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "昔 遠い 土地から やって来て 棲みついた。 羽から 分泌する ジェルは 水と 汚れを 弾く。",
+      "violet": "流れが 急な 川も 自由に 泳ぎまわる 脚力を 持つ。 きれい好きで 思い込みが 強い。"
     }
   },
   {
     "number": 8,
     "numberAll": 913,
     "nameJpn": "ウェルカモ",
-    "nameEng": "english name",
+    "nameEng": "Quaxwell",
     "category": "レッスン",
     "type1": "water",
     "type2": false,
-    "height": 0,
-    "weight": 0,
+    "height": 1.2,
+    "weight": 21.5,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "ひたすらに 浅瀬を 走り込んで 足腰を 鍛え 仲間同士で 足技の 華麗さを 競いあう。",
+      "violet": "様々な 地方の ポケモンや 人の 動きを 見て 自らの 踊りに 取り入れる 努力家。"
     }
   },
   {
     "number": 9,
     "numberAll": 914,
     "nameJpn": "ウェーニバル",
-    "nameEng": "english name",
+    "nameEng": "Quaquaval",
     "category": "ダンサー",
     "type1": "water",
     "type2": "fighting",
     "height": 1.8,
     "weight": 61.9,
     "descriptions": {
-      "scarlet": "",
-      "violet": ""
+      "scarlet": "ひと蹴りで トラックを 転がす 強靭な 脚力を 駆使し エキゾチックな 踊りを みせる。",
+      "violet": "異国情緒 溢れる ダンスで 見るものを 魅了し 水でできた 飾り羽根を 振りまわし 切り裂く。"
     }
   },
   {
@@ -278,7 +278,382 @@
     }
   },
   {
-    "number": 24,
+    "number": 25,
+    "numberAll": 924,
+    "nameJpn": "ワッカネズミ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "normal",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 26,
+    "numberAll": 925,
+    "nameJpn": "イッカネズミ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "normal",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 27,
+    "numberAll": 926,
+    "nameJpn": "パピモッチ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "fairy",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 28,
+    "numberAll": 927,
+    "nameJpn": "バウッツェル",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "fairy",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 29,
+    "numberAll": 928,
+    "nameJpn": "ミニーブ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "grass",
+    "type2": "normal",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 30,
+    "numberAll": 929,
+    "nameJpn": "オリーニョ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "grass",
+    "type2": "normal",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 31,
+    "numberAll": 930,
+    "nameJpn": "オリーヴァ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "grass",
+    "type2": "normal",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 32,
+    "numberAll": 931,
+    "nameJpn": "イキリンコ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "normal",
+    "type2": "flying",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 33,
+    "numberAll": 932,
+    "nameJpn": "コジオ",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "rock",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 34,
+    "numberAll": 933,
+    "nameJpn": "ジオヅム",
+    "nameEng": "english name",
+    "category": "",
+    "type1": "rock",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 35,
+    "numberAll": 934,
+    "nameJpn": "キョジオーン",
+    "nameEng": "Gargnacl",
+    "category": "",
+    "type1": "rock",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 35,
+    "numberAll": 935,
+    "nameJpn": "カルボウ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "fire",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 35,
+    "numberAll": 936,
+    "nameJpn": "グレンアルマ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "fire",
+    "type2": "psychic",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 937,
+    "nameJpn": "ソウブレイズ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "fire",
+    "type2": "ghost",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 938,
+    "nameJpn": "ズピカ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "electric",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 939,
+    "nameJpn": "ハラバリー",
+    "nameEng": "english",
+    "category": "",
+    "type1": "electric",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 940,
+    "nameJpn": "カイデン",
+    "nameEng": "english",
+    "category": "",
+    "type1": "electric",
+    "type2": "flying",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 941,
+    "nameJpn": "タイカイデン",
+    "nameEng": "english",
+    "category": "",
+    "type1": "electric",
+    "type2": "flying",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 942,
+    "nameJpn": "オラチフ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "dark",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 943,
+    "nameJpn": "マフィティフ",
+    "nameEng": "english",
+    "category": "",
+    "type1": "dark",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 944,
+    "nameJpn": "シルシュルー",
+    "nameEng": "english",
+    "category": "",
+    "type1": "poison",
+    "type2": "normal",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 36,
+    "numberAll": 945,
+    "nameJpn": "タギングル",
+    "nameEng": "english",
+    "category": "",
+    "type1": "poison",
+    "type2": "normal",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 376,
+    "numberAll": 984,
+    "nameJpn": "イダイナキバ",
+    "nameEng": "Great Tusk",
+    "category": "パラドックス",
+    "type1": "ground",
+    "type2": "fighting",
+    "height": 1.2,
+    "weight": 21.0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 377,
+    "numberAll": 985,
+    "nameJpn": "サケブシッポ",
+    "nameEng": "Screaming Tail",
+    "category": "パラドックス",
+    "type1": "fairy",
+    "type2": "psychic",
+    "height": 1.2,
+    "weight": 8.0,
+    "descriptions": {
+      "scarlet": "目撃例は 過去 1件のみ。 古い 探検記に 記された 謎の 生物に 似た ポケモン。",
+      "violet": "10億年前の プリンと オカルト雑誌が 紹介した 謎の ポケモンに 似ている。"
+    }
+  },
+  {
+    "number": 378,
+    "numberAll": 986,
+    "nameJpn": "アラブルタケ",
+    "nameEng": "Brute Bonnet",
+    "category": "パラドックス",
+    "type1": "grass",
+    "type2": "dark",
+    "height": 1.2,
+    "weight": 21.0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 379,
     "numberAll": 987,
     "nameJpn": "ハバタクカミ",
     "nameEng": "Flutter Mane",
@@ -288,8 +663,294 @@
     "height": 0.9,
     "weight": 41.0,
     "descriptions": {
+      "scarlet": "とある 書物に 登場する ハバタクカミという 生物と 似た 特徴を 持つ ポケモン",
+      "violet": "オカルト雑誌で 取り上げられた 翼竜の 幽霊と 特徴だけは 似ているのだ。"
+    }
+  },
+  {
+    "number": 380,
+    "numberAll": 988,
+    "nameJpn": "チオハウハネ",
+    "nameEng": "Slither Wing",
+    "category": "パラドックス",
+    "type1": "bug",
+    "type2": "fighting",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 381,
+    "numberAll": 989,
+    "nameJpn": "スナノケガワ",
+    "nameEng": "Sandy Shocks",
+    "category": "パラドックス",
+    "type1": "electric",
+    "type2": "ground",
+    "height": 2.3,
+    "weight": 60.0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 382,
+    "numberAll": 990,
+    "nameJpn": "テツノワダチ",
+    "nameEng": "Iron Treads",
+    "category": "パラドックス",
+    "type1": "ground",
+    "type2": "steel",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 383,
+    "numberAll": 991,
+    "nameJpn": "テツノツツミ",
+    "nameEng": "Iron Bundle",
+    "category": "パラドックス",
+    "type1": "ice",
+    "type2": "water",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 384,
+    "numberAll": 992,
+    "nameJpn": "テツノカイナ",
+    "nameEng": "Iron Hands",
+    "category": "パラドックス",
+    "type1": "fighting",
+    "type2": "electric",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 385,
+    "numberAll": 993,
+    "nameJpn": "テツノコウベ",
+    "nameEng": "Iron Jugulis",
+    "category": "パラドックス",
+    "type1": "dark",
+    "type2": "flying",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 386,
+    "numberAll": 994,
+    "nameJpn": "テツノドクガ",
+    "nameEng": "Iron Moth",
+    "category": "パラドックス",
+    "type1": "fire",
+    "type2": "poison",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 387,
+    "numberAll": 995,
+    "nameJpn": "テツノイバラ",
+    "nameEng": "Iron Thorns",
+    "category": "パラドックス",
+    "type1": "rock",
+    "type2": "electric",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 388,
+    "numberAll": 996,
+    "nameJpn": "セビエ",
+    "nameEng": "",
+    "category": "",
+    "type1": "dragon",
+    "type2": "ice",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 389,
+    "numberAll": 997,
+    "nameJpn": "セゴール",
+    "nameEng": "",
+    "category": "",
+    "type1": "dragon",
+    "type2": "ice",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 390,
+    "numberAll": 998,
+    "nameJpn": "セグレイブ",
+    "nameEng": "",
+    "category": "",
+    "type1": "dragon",
+    "type2": "ice",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 391,
+    "numberAll": 999,
+    "nameJpn": "コレクレー",
+    "nameEng": "",
+    "category": "",
+    "type1": "ghost",
+    "type2": false,
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 392,
+    "numberAll": 1000,
+    "nameJpn": "サーフゴー",
+    "nameEng": "Goldengo",
+    "category": "たからもの",
+    "type1": "steel",
+    "type2": "ghost",
+    "height": 1.2,
+    "weight": 30.0,
+    "descriptions": {
+      "scarlet": "1000枚の コインで 体が できているらしい。 人懐こく だれとでも すぐに 仲良くなれる。",
+      "violet": "コインが 積みあがって 作られた 体は 頑丈。 コインを 連射して 敵を 圧倒する。"
+    }
+  },
+  {
+    "number": 393,
+    "numberAll": 1001,
+    "nameJpn": "チオンジェン",
+    "nameEng": "Wo-Chien",
+    "category": "さいやく",
+    "type1": "dark",
+    "type2": "grass",
+    "height": 1.5,
+    "weight": 74.2,
+    "descriptions": {
+      "scarlet": "王の 悪事を 木簡に 記し 処罰された 人の 恨みが 枯葉を まとい ポケモンとなった。",
+      "violet": "草木の エネルギーを 吸い上げる。 周囲の 森は たちどころに 枯れ果て 田畑は 不作となる。"
+    }
+  },
+  {
+    "number": 394,
+    "numberAll": 1002,
+    "nameJpn": "パオジアン",
+    "nameEng": "Chien-Pao",
+    "category": "さいやく",
+    "type1": "dark",
+    "type2": "ice",
+    "height": 1.9,
+    "weight": 152.2,
+    "descriptions": {
+      "scarlet": "100トンの 積雪を 操る。 雪崩を 起こして その中を 出入りして 無邪気に 遊ぶ。",
+      "violet": "大昔に 剣によって 露と消えた 者たちの 憎しみが 雪を まとい ポケモンになった。"
+    }
+  },
+  {
+    "number": 395,
+    "numberAll": 1003,
+    "nameJpn": "ディンルー",
+    "nameEng": "Ting-Lu",
+    "category": "さいやく",
+    "type1": "dark",
+    "type2": "ground",
+    "height": 2.7,
+    "weight": 699.7,
+    "descriptions": {
+      "scarlet": "古の 儀式で 使われた 器に 注がれた 恐怖が 土石を まとい ポケモンとなった。",
+      "violet": "とても 重たい 頭を ゆっくり 振り下ろし 深さ50メートルの 長大な 地割れを 引き起こす。"
+    }
+  },
+  {
+    "number": 396,
+    "numberAll": 1004,
+    "nameJpn": "イーユイ",
+    "nameEng": "Chi-Yu",
+    "category": "さいやく",
+    "type1": "dark",
+    "type2": "fire",
+    "height": 0.4,
+    "weight": 4.9,
+    "descriptions": {
+      "scarlet": "3000度の 炎を 操る。 岩や 砂利を 溶かして 作った マグマの海を ゆうゆうと 泳ぐ。",
+      "violet": "多くの 争いの 火種となった 勾玉に 集まった 妬みが 炎を まとい ポケモンとなった。"
+    }
+  },
+  {
+    "number": 397,
+    "numberAll": 1005,
+    "nameJpn": "トドロクツキ",
+    "nameEng": "Roaring Moon",
+    "category": "パラドックス",
+    "type1": "dragon",
+    "type2": "dark",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
+      "scarlet": "",
+      "violet": ""
+    }
+  },
+  {
+    "number": 398,
+    "numberAll": 1006,
+    "nameJpn": "テツノブジン",
+    "nameEng": "Iron Variant",
+    "category": "パラドックス",
+    "type1": "fairy",
+    "type2": "fighting",
+    "height": 0,
+    "weight": 0,
+    "descriptions": {
       "scarlet": "",
       "violet": ""
     }
   }
+
 ]

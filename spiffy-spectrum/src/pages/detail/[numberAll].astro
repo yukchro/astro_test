@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { numberAll, nameJpn, category, descriptions, ja, weight, height, type1, type2 } = Astro.props;
 ---
 
-<Layout title={ `${nameJpn}` }>
+<Layout title={ `${nameJpn}` } thumbnail={ `${numberAll}` }>
   <main data-pagefind-body transition:animate="slide">
     <div class="pokedex-detail">
       <div class="pokedex-detail__inner">
@@ -25,7 +25,7 @@ const { numberAll, nameJpn, category, descriptions, ja, weight, height, type1, t
           <div class="pokedex-detail__stats">
             <h1 class="pokedex-detail__name">{ nameJpn }</h1>
             <span class="pokedex-detail__category">{ category }ポケモン</span>
-            <span class="pokedex-detail__size">おもさ: { weight } m / たかさ: { height } kg</span>
+            <span class="pokedex-detail__size">おもさ: { weight } kg / たかさ: { height } m</span>
             <ul class="pokedex-detail__types">
               <li class={"pokedex-detail__type u-type-" + type1}>
                 <img src={"/assets/images/" +type1+".svg"} class="pokedex-detail__type-icon">

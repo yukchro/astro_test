@@ -1,15 +1,23 @@
 ---
-import '@pagefind/default-ui/css/ui.css';
+import '/src/scss/pagefind.css';
 ---
 
 <nav class="l-pokedex-nav">
   <div class="l-pokedex-nav__inner">
-    <button class="l-pokedex-nav__func l-pokedex-nav__reset">Reset</button>
-    <button class="l-pokedex-nav__func l-pokedex-nav__view" >Grid</button>
-    <button class="l-pokedex-nav__func l-pokedex-nav__sort" >Sort</button>
-    <button class="l-pokedex-nav__func l-pokedex-nav__filter" >Filter</button>
-    <button class="l-pokedex-nav__search" id="search-toggle">Search</button>
-    <div class="l-pokedex-search" id="search"></div>
+    <button class="l-pokedex-nav__func l-pokedex-nav--reset">Reset</button>
+    <button class="l-pokedex-nav__func l-pokedex-nav--view" >Grid</button>
+    <button class="l-pokedex-nav__func l-pokedex-nav--sort" id="sort-toggle">Sort</button>
+    <button class="l-pokedex-nav__func l-pokedex-nav--filter" >Filter</button>
+    <button class="l-pokedex-nav__search" id="search-toggle">
+      <span class="l-pokedex-nav__search-rect">Search</span>
+    </button>
+  </div>
+  <div class="l-pokedex-search" id="search"></div>
+  <div class="l-pokedex-nav__sort">
+    <button class="l-pokedex-nav__sort-item" data-type="number">Number</button>
+    <button class="l-pokedex-nav__sort-item">Name</button>
+    <button class="l-pokedex-nav__sort-item">Height</button>
+    <button class="l-pokedex-nav__sort-item">Weight</button>
   </div>
 </nav>
 
@@ -18,15 +26,36 @@ import '@pagefind/default-ui/css/ui.css';
   new PagefindUI({
     element: '#search',
     showImages: true,
+    translations: {
+      placeholder: "input search text...",
+    }
   });
 
   window.addEventListener('DOMContentLoaded', ()=> {
     const searchToggle = document.getElementById('search-toggle');
-    const navigation = document.querySelector('.l-pokedex-nav');
+    const searchArea = document.querySelector('.l-pokedex-search');
     searchToggle.addEventListener('click', ()=> {
-      navigation.classList.toggle('is-active');
+      searchArea.classList.toggle('is-active');
+      searchToggle.classList.toggle('is-active');
+    });
+
+    const sortToggle = document.getElementById('sort-toggle');
+    const sortArea = document.querySelector('.l-pokedex-nav__sort');
+
+    sortToggle.addEventListener('click', ()=> {
+      sortArea.classList.toggle('is-active')
     })
-  })
+
+    const dataList = document.querySelectorAll('.pokedex-list__item');
+    const sortType = document.querySelectorAll('.l-pokedex-nav__sort-item');
+    sortType.forEach(t => {
+      t.addEventListener('click',()=> {
+        if(t.dataset.type == 'number') {
+          // dataList.filter('')
+        }
+      })
+    })
+  });
 </script>
 
 <style lang="scss">
@@ -41,11 +70,13 @@ import '@pagefind/default-ui/css/ui.css';
     
     &__inner {
       position: relative;
-      background-color: rgba(#dedede, 0.8);
+      z-index: 8;
+      background-color: rgba(#333, 0.7);
       border-radius: 24px;
       display: flex;
       justify-content: flex-end;
       backdrop-filter: blur(4px);
+      color: #fff;
       
     }
 
@@ -53,44 +84,125 @@ import '@pagefind/default-ui/css/ui.css';
       font-weight: 700;
     }
 
-    &__reset {
+    &--reset {
       margin-right: 24px;
     }
 
-    &__view {
+    &--view {
       margin-right: 16px;
     }
 
-    &__sort {
+    &--sort {
       margin-right: 16px;
     }
     
-    &__filter {
+    &--filter {
       margin-right: 24px;
     }
 
     &__search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background-color: #ccc;
+      background-color: #333;
+
+      &.is-active::before {
+        opacity: 0;
+      }
+
+      &.is-active &-rect {
+        opacity: 1;
+        rotate: 135deg;
+      }
+    }
+
+    &__search::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       background-image: url('/assets/images/icon-search.svg');
       background-size: 20px 20px;
       background-repeat: no-repeat;
       background-position: center;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
+      transition-property: opacity;
+      transition-duration: 400ms;
+    }
+    
+    &__search-rect {
+      position: relative;
+      font-size: 0;
+      color: transparent;
+      width: 16px;
+      height: 2px;
+      background-color: #fff;
+      rotate: 0;
+      opacity: 0;
+      transition-property: opacity, rotate;
+      transition-duration: 400ms;
+    }
+
+    &__search-rect::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: inherit;
+      height: inherit;
+      background-color: inherit;
+      rotate: 90deg;
+    }
+
+    &__sort {
+      position: absolute;
+      bottom: calc(100% + 16px );
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      border-radius: 16px;
+
+      &.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
     }
   }
 
   .l-pokedex-search {
-    display: none;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #eee;
-    // opacity: 0;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    scale: 1 0;
+    transition-property: opacity, scale, visibility;
+    transition-duration: 400ms;
+    transform-origin: center bottom;
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      scale: 1 1;
+    }
+   
+  }
+
+  .pagefind-ui__drawer {
+    position: absolute;
   }
 </style>

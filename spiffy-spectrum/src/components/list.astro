@@ -9,7 +9,7 @@ const pdata = Astro.props;
   <ol class="pokedex-list is-list">
     {
       pdata["pdata"].map( (item) =>
-        <li class="pokedex-list__item">
+        <li class="pokedex-list__item" data-number={item.numberAll} data-name={item.nameJpn} data-height={item.height} data-weight={item.weight}>
           <a href={"/detail/"+item.numberAll+"/"} class="pokedex-list__link">
             <span class="pokedex-list__number">{item.numberAll}</span>
             <figure class="pokedex-list__icon">
