@@ -47,14 +47,14 @@
 }
 
 .pagefind-ui__message {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 1.4rem;
   line-height: 1.2;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ddd;
 }
 
 .pagefind-ui__results {
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
