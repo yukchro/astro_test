@@ -15,9 +15,9 @@ import '/src/scss/pagefind.css';
   <div class="l-pokedex-search" id="search"></div>
   <div class="l-pokedex-nav__sort">
     <button class="l-pokedex-nav__sort-item" data-type="number">Number</button>
-    <button class="l-pokedex-nav__sort-item">Name</button>
-    <button class="l-pokedex-nav__sort-item">Height</button>
-    <button class="l-pokedex-nav__sort-item">Weight</button>
+    <button class="l-pokedex-nav__sort-item" data-type="name">Name</button>
+    <button class="l-pokedex-nav__sort-item" data-type="height">Height</button>
+    <button class="l-pokedex-nav__sort-item" data-type="weight">Weight</button>
   </div>
 </nav>
 
@@ -47,12 +47,25 @@ import '/src/scss/pagefind.css';
       sortArea.classList.toggle('is-active')
     })
   
-    const dataList = document.querySelectorAll('.pokedex-list__item');
+    const dataWrap = document.getElementById('js-list-wrap');
+    const dataList = Array.from( document.querySelectorAll('.pokedex-list__item') );
     const sortType = document.querySelectorAll('.l-pokedex-nav__sort-item');
     sortType.forEach(t => {
       t.addEventListener('click',()=> {
-        if(t.dataset.type == 'number') {
-          // dataList.filter('')
+        if(t.dataset.type == 'height') {
+          const sorted = dataList.sort((a,b) => a.dataset.height - b.dataset.height);
+          sorted.forEach(s => {
+            dataWrap.appendChild(dataWrap.removeChild(s))
+          })
+        } else if(t.dataset.type == 'weight') {
+          const sorted = dataList.sort((a,b) => a.dataset.weight - b.dataset.weight);
+          sorted.forEach(s => {
+            dataWrap.appendChild(dataWrap.removeChild(s))
+          })
+        } else if(t.dataset.type == 'name') {
+          // const sorted = dataList.sort((a,b) => a.dataset.name - b.dataset.name);
+          const sorted = dataList.sort( (a, b) => a.dataset.name.localeCompare(b.dataset.name, 'ja') );
+          sorted.forEach(s => dataWrap.appendChild(dataWrap.removeChild(s)) );
         }
       })
     })

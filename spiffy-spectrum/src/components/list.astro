@@ -6,7 +6,7 @@ const pdata = Astro.props;
 ---
 
 <div class="pokedex">
-  <ol class="pokedex-list is-list">
+  <ol class="pokedex-list is-list" id="js-list-wrap">
     {
       pdata["pdata"].map( (item) =>
         <li class="pokedex-list__item" data-number={item.numberAll} data-name={item.nameJpn} data-height={item.height} data-weight={item.weight}>
@@ -18,6 +18,12 @@ const pdata = Astro.props;
             <h2 class="pokedex-list__name">
               <span class="pokedex-list__name-jpn">{ item.nameJpn }</span>
             </h2>
+
+            <ul class="pokedex-list__sizes">
+              <li>{item.height}m</li>
+              <li>{item.weight}kg</li>
+            </ul>
+
             <div class="pokedex-list__type">
               <span class={"pokedex-list__type-label u-type-" +item.type1 }>
                 <img src={"/assets/images/"+item.type1+".svg"} alt={item.type1} class="pokedex-list__type-icon">
@@ -68,11 +74,21 @@ const pdata = Astro.props;
 
     &__number {
       font-size: 12px;
+      min-width: 34px;
+      text-align: center;
     }
 
     &__name-jpn {
       font-size: 16px;
       font-weight: 700;
+    }
+
+    &__sizes {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      margin-left: auto;
+      text-align: right;
     }
 
     &__icon {
@@ -84,7 +100,6 @@ const pdata = Astro.props;
 
     &__type {
       display: flex;
-      margin-left: auto;
       min-width: 54px;
       column-gap: 6px;
     }
